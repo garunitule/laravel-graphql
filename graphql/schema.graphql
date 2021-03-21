@@ -11,6 +11,14 @@ type Query {
     post(id: Int! @eq): Post @find
 }
 
+type Mutation {
+    createUser(
+        name: String!
+        email: String!
+        password: String!
+    ): User! @create
+}
+
 type User {
     id: ID!
     name: String!
